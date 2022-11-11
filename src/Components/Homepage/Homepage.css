@@ -1,0 +1,54 @@
+
+
+.original {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#welcome-1, #welcome-3 {
+    color: #000000;
+    display: inline;
+}
+
+#welcome-2 {
+    color: #cc0052;
+    display: inline;
+    font-style: italic;
+    font-weight: bold;
+    background-color: bisque;
+    border-radius: 30px;
+    padding: 8px;
+
+}
+
+.text {
+    padding: 20px 0 10px 0;
+}
+
+img {
+    transform: rotate(180deg);
+    width: 150px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #cc0052;
+    color: aliceblue;
+    border: solid 1px #ffffff ;
+    border-radius: 50px;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.new {
+    text-align: center;
+    position: relative;
+    top: -410px;
+    
+}
