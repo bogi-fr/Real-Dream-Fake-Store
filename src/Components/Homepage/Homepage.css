@@ -25,11 +25,11 @@
     padding: 20px 0 10px 0;
 }
 
-img {
-    transform: rotate(180deg);
-    width: 150px;
-    height: 100px;
-    margin-bottom: 15px;
+.category-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 35px;
 }
 
 button {
@@ -37,18 +37,40 @@ button {
     color: aliceblue;
     border: solid 1px #ffffff ;
     border-radius: 50px;
-    padding: 15px;
     font-weight: bold;
     font-size: 16px;
-}
-
-.button-container {
-    text-align: center;
+    width: 220px;
+    height: 57px;
 }
 
 .new {
     text-align: center;
-    position: relative;
-    top: -410px;
-    
+}
+
+.category-title {
+    text-align: center;
+}
+
+.electronics-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.jewelry-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.men-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.women-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
