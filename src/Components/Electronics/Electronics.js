@@ -1,9 +1,9 @@
 import React from "react";
 import axios from "axios";
-import { Link } from 'react-router-dom';
 import './Electronics.css';
+import ElectronicProd from "../ElectronicProd/ElectronicProd";
 
-export default function Electronics (props) {
+function Electronics (props) {
 
     const [electronics, setElectronics] = React.useState([]);
 
@@ -24,15 +24,26 @@ export default function Electronics (props) {
         },[electronics]
     )
 
-    const { image, title, price, id} = props;
+    
 
     return (
-        <Link to={`/electronics/${id}`}>
-            <div className="Electronics">
-                <img className='electronics-image' src={image} alt={title} />
-                <h4 className='electronics-title' >{title}</h4>
-                <p className='electronics-price'>{price}€</p>
-            </div>
-        </Link>
+        <div className="electronics">
+            {console.log('render')}
+            {electronics.map(
+                function(item) {
+                    return <ElectronicProd
+                    key={item.id}
+                    image={item.image}
+                    title={item.title}
+                    price={item.price}
+                    category={item.category}
+                    id={item.id}
+                    />
+                }
+                )
+            }
+        </div>
     )
 }
+
+export default Electronics;

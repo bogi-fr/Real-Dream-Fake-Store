@@ -32,7 +32,7 @@
     margin-bottom: 35px;
 }
 
-button {
+.category-button {
     background-color: #cc0052;
     color: aliceblue;
     border: solid 1px #ffffff ;
@@ -41,6 +41,18 @@ button {
     font-size: 16px;
     width: 220px;
     height: 57px;
+    /* box-shadow: 0 5px #999; */
+}
+
+.category-button:hover {
+    cursor: pointer;
+    background-color: #b30047;
+}
+
+.category-button:active {
+    background-color: #b30047;
+  /*   box-shadow: 0 2px #666; */
+    transform: translateY(1px);
 }
 
 .new {
@@ -49,28 +61,4 @@ button {
 
 .category-title {
     text-align: center;
-}
-
-.electronics-flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.jewelry-flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.men-flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.women-flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
 }

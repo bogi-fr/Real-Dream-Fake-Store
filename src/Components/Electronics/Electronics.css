@@ -1,0 +1,8 @@
+.electronics {
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-rows: 300px 300px;
+    justify-content: space-evenly;
+    column-gap: 10px;
+    row-gap: 30px;
+}

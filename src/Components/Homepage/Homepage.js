@@ -1,17 +1,9 @@
 import React from "react";
 import { useState } from 'react';
 import './Homepage.css';
-/* import Electronics from "../Electronics/Electronics"; */
+import Electronics from "../Electronics/Electronics";
 
 export default function Homepage (props) {
-
-    /* const original = document.getElementsByClassName("original"); */
-
-    /* original.addEventListener("click", changeVisibility); */
-
- /*    const changeVisibility = () => {
-        original.classList.toggle("hidden");
-    } */
 
     const [isElectricVisible, setIsElectricVisible] = useState(false);
     const [isJewelryVisible, setIsJewelryVisible] = useState(false);
@@ -64,24 +56,28 @@ export default function Homepage (props) {
                     </div>
                     <div className="category-buttons">
                         <button
+                            className="category-button"
                             type="button"
                             id="electronics-button"
                             onClick={handleElectricClick}
                         >Electronics
                         </button>
                         <button
+                            className="category-button"
                             type="button"
                             id="jewelry-button"
                             onClick={handleJewelryClick}
                             >Jewelry
                         </button>
                         <button
+                            className="category-button"
                             type="button"
                             id="men-clothing-button"
                             onClick={handleMenClick}
                             >Men's<br></br>Clothing
                         </button>
                         <button
+                            className="category-button"
                             type="button"
                             id="women-clothing-button"
                             onClick={handleWomenClick}
@@ -92,10 +88,7 @@ export default function Homepage (props) {
                         <div className="electronics" style={{display: isElectricVisible ? 'block' : 'none'}}>
                             <h2 className="category-title">Our Products in the Electronics Category</h2>
                             <div className="electronics-flex">
-                                <p>This is an electronic product</p>
-                                <p>This is an electronic product</p>
-                                <p>This is an electronic product</p>
-                                <p>This is an electronic product</p>
+                                <Electronics />
                             </div>
                         </div>
                         <div className="jewelry product-list" style={{display: isJewelryVisible ? 'block' : 'none'}}>
@@ -129,7 +122,7 @@ export default function Homepage (props) {
                     <div className="new-products container" >
                         <h2>Our Newest Products:</h2>
                         <img
-                            src='src/Components/Homepage/construction.png'
+                            src='%PUBLIC_URL%/construction.png'
                             alt="This section is under construction. Check back soon.">
                         </img>
                     </div>
