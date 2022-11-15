@@ -45,7 +45,7 @@ export default function Homepage (props) {
             </div>
             <div className="hp-main">
                 <div className="main-container">
-                    <div className="original">
+                    <div className="message">
                         <h2 id="welcome-1">Welcome to the</h2> <h2 id="welcome-2">Real Dream Fake Store</h2><h2 id="welcome-3">!</h2>
                         <div className="text">
                             <h4>You can find anything and everything You need,</h4>
@@ -54,7 +54,7 @@ export default function Homepage (props) {
                         </div>
                         <br></br>
                     </div>
-                    <div className="category-buttons">
+                    <div className="category-buttons-container">
                         <button
                             className="category-button"
                             type="button"
@@ -119,12 +119,15 @@ export default function Homepage (props) {
                             </div>
                         </div>
                     </div>
-                    <div className="new-products container" >
-                        <h2>Our Newest Products:</h2>
-                        <img
-                            src='%PUBLIC_URL%/construction.png'
+                    <div className="new-products-container" >
+                        <h2 id="new-title">Our Newest Products:</h2>
+                        <div className="new-products-image-container">
+                            <img
+                            id="construction-image"
+                            src={require("./construction.png")}
                             alt="This section is under construction. Check back soon.">
-                        </img>
+                            </img>
+                        </div>
                     </div>
                 </div>
             </div>
