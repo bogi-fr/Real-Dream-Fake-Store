@@ -18,17 +18,16 @@ function Electronics (props) {
             fetchElectronics();
         },[]
     )
+
     React.useEffect(
         () => {
             console.log('content updated: ', electronics)
         },[electronics]
     )
 
-    
-
     return (
         <div className="electronics">
-            {console.log('render')}
+            {console.log('render electronic products')}
             {electronics.map(
                 function(item) {
                     return <ElectronicProd

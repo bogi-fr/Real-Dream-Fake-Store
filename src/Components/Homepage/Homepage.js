@@ -5,37 +5,37 @@ import Electronics from "../Electronics/Electronics";
 
 export default function Homepage (props) {
 
-    const [isElectricVisible, setIsElectricVisible] = useState(false);
-    const [isJewelryVisible, setIsJewelryVisible] = useState(false);
-    const [isMenVisible, setIsMenVisible] = useState(false);
-    const [isWomenVisible, setIsWomenVisible] = useState(false);
+    const [electricVisibility, setElectricVisibility] = useState(false);
+    const [jewelryVisibility, setJewelryVisibility] = useState(false);
+    const [menVisibility, setMenVisibility] = useState(false);
+    const [womenVisibility, setWomenVisibility] = useState(false);
 
     const handleElectricClick = event => {
-        setIsElectricVisible(current => !current);
-        setIsJewelryVisible(false);
-        setIsMenVisible(false);
-        setIsWomenVisible(false);
+        setElectricVisibility(current => !current);
+        setJewelryVisibility(false);
+        setMenVisibility(false);
+        setWomenVisibility(false);
     };
 
     const handleJewelryClick = event => {
-        setIsJewelryVisible(current => !current);
-        setIsElectricVisible(false);
-        setIsMenVisible(false);
-        setIsWomenVisible(false);
+        setJewelryVisibility(current => !current);
+        setElectricVisibility(false);
+        setMenVisibility(false);
+        setWomenVisibility(false);
     }
 
     const handleMenClick = event => {
-        setIsMenVisible(current => !current);
-        setIsElectricVisible(false);
-        setIsJewelryVisible(false);
-        setIsWomenVisible(false);
+        setMenVisibility(current => !current);
+        setElectricVisibility(false);
+        setJewelryVisibility(false);
+        setWomenVisibility(false);
     }
 
     const handleWomenClick = event => {
-        setIsWomenVisible(current => !current);
-        setIsElectricVisible(false);
-        setIsJewelryVisible(false);
-        setIsMenVisible(false);
+        setWomenVisibility(current => !current);
+        setElectricVisibility(false);
+        setJewelryVisibility(false);
+        setMenVisibility(false);
     }
 
     return (
@@ -85,13 +85,13 @@ export default function Homepage (props) {
                         </button>
                     </div>
                     <div className="product-container">
-                        <div className="electronics" style={{display: isElectricVisible ? 'block' : 'none'}}>
+                        <div className="electronics" style={{display: electricVisibility ? 'block' : 'none'}}>
                             <h2 className="category-title">Our Products in the Electronics Category</h2>
                             <div className="electronics-flex">
                                 <Electronics />
                             </div>
                         </div>
-                        <div className="jewelry product-list" style={{display: isJewelryVisible ? 'block' : 'none'}}>
+                        <div className="jewelry product-list" style={{display: jewelryVisibility ? 'block' : 'none'}}>
                             <h2 className="category-title">Our Products in the Jewelry Category</h2>
                             <div className="jewelry-flex">
                                 <p>This is a jewelry</p>
@@ -100,7 +100,7 @@ export default function Homepage (props) {
                                 <p>This is a jewelry</p>
                             </div>
                         </div>
-                        <div className="men product-list" style={{display: isMenVisible ? 'block' : 'none'}}>
+                        <div className="men product-list" style={{display: menVisibility ? 'block' : 'none'}}>
                             <h2 className="category-title">Our Products in the Men's Clothing Category</h2>
                             <div className="men-flex">
                                 <p>This is a men's clothes product</p>
@@ -109,7 +109,7 @@ export default function Homepage (props) {
                                 <p>This is a men's clothes product</p>
                             </div>
                         </div>
-                        <div className="women product-list" style={{display: isWomenVisible ? 'block' : 'none'}}>
+                        <div className="women product-list" style={{display: womenVisibility ? 'block' : 'none'}}>
                             <h2 className="category-title">Our Products in the Women's Clothing Category</h2>
                             <div className="women-flex">
                                 <p>This is a women's clothes product</p>
@@ -123,9 +123,9 @@ export default function Homepage (props) {
                         <h2 id="new-title">Our Newest Products:</h2>
                         <div className="new-products-image-container">
                             <img
-                            id="construction-image"
-                            src={require("./construction.png")}
-                            alt="This section is under construction. Check back soon.">
+                                id="construction-image"
+                                src={require("./construction.png")}
+                                alt="This section is under construction. Check back soon.">
                             </img>
                         </div>
                     </div>
